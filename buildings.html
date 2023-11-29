@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Hostel Room Availability</title>
+    <style>
+        /* Add your own styling here */
+        .building {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .floor {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .apartment {
+            margin-bottom: 10px;
+        }
+
+        .room {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            border: 1px solid #ddd;
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .occupied {
+            background-color: #ff8080;
+        }
+
+        .available {
+            background-color: #80ff80;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PG Hostel Room Availability</h1>
+
+    <!----------------------------------------------------------------- Building 1 ---------------------------------------------------------------->
+    <div class="building" id="building1">
+        <div class="floor">
+            <h3>Building 1 - Floor 1</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <div class="floor">
+            <h3>Building 1 - Floor 2</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <div class="floor">
+            <h3>Building 1 - Floor 3</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>       
+         <div class="floor">
+            <h3>Building 1 - Floor 4</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">4A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4A (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">4B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4B (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">4C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4C (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">4D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">4D (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>  
+        <div class="floor">
+            <h3>Building 1 - Floor 5</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">5A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5A (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">5B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5B (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">5C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5C (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">5D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">5D (Bed 4)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <!-- Add more floors as needed -->
+    </div>
+
+    <!----------------------------------------------------------- Building 2 ---------------------------------------------------------------->
+    <div class="building" id="building2">
+        <div class="floor">
+            <h3>Building 2 - Floor 1</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1A (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1B (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1C (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">1D (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <div class="floor">
+            <h3>Building 2 - Floor 2</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2A (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2B (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2C (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">2D (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <div class="floor">
+            <h3>Building 2 - Floor 3</h3>
+            <div class="apartment">
+                <h4>Apartment 1</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3A (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 2</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3B (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 3</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3C (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <div class="apartment">
+                <h4>Apartment 4</h4>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 1)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 2)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 3)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 4)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 5)</div>
+                <div class="room available" onclick="toggleAvailability(this)">3D (Bed 6)</div>
+                <!-- Add more rooms as needed -->
+            </div>
+            <!-- Add more apartments as needed -->
+        </div>
+        <!-- Add more floors as needed -->
+    </div>
+
+    <!-- JavaScript to toggle room availability -->
+    <script>
+        function toggleAvailability(room) {
+            room.classList.toggle('available');
+            room.classList.toggle('occupied');
+        }
+    </script>
+</body>
+</html>
